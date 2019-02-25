@@ -4,7 +4,9 @@ For my MKTG 447 Project group members and classmates to see step-by-step the dat
 # Welcome to the Tutorial (and Github)!
 The best way to follow is to follow-along with the code! 
 
-To get started, download Anaconda distribution for Python 3.7. Once finished, launch Jupyter Notebook. Jupyter notebook is an open-source web application and "notebook that integrates code and its output into a single document that combines visualizations, narrative text, mathematical equations, and other rich media" (Dataquest.com). 
+To get started, download Anaconda distribution for Python 3.7. Once finished, launch Jupyter Notebook. 
+
+Jupyter notebook is an open-source web application and "notebook that integrates code and its output into a single document that combines visualizations, narrative text, mathematical equations, and other rich media" (Dataquest.com). 
 
 You can access and upload both notebooks from Thomas and myself from this repository so you can run the code on your own. Remember to install any packages that are not available on your machine already.
 
@@ -12,8 +14,8 @@ Link: https://www.anaconda.com/distribution/
 
 Lastly, Git is a version control system, and "a tool to manage source code history." Github is the service that hosts Git repositories or projects. (Stack Overflow). 
 
-Otherwise you can just follow along with these README.
+Otherwise you can just follow along with this README.
 
-#This is how you install python packages into Jupyter Notebook
-#The package we will be using to interface with Twitter is Python-Twitter
-!pip install python-twitter
+# What is Text Analytics? 
+
+Essentially, deriving insights from text, also considered unstructured data (not defined by rows and columns). To harness these insights and redfine text into something that can be calculated, you will need to do some programming and understand some (basic) linguistic concepts/packages.
