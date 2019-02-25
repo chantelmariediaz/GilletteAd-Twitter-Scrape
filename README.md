@@ -11,7 +11,7 @@ You can access and upload both notebooks from Thomas and myself from this reposi
 Link: https://www.python.org/downloads/
 Link: https://www.anaconda.com/distribution/
 
-Lastly, Git is a version control system, and "a tool to manage source code history." Github is the service that hosts Git repositories or projects (Stack Overflow). 
+Lastly, Git is a version control system, or "a tool to manage source code history." Github is the service that hosts Git repositories or projects (Stack Overflow). 
 
 Otherwise you can just follow along with this README.
 
