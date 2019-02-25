@@ -25,11 +25,14 @@ Essentially, deriving insights from text, also considered unstructured data (not
 
 ### What is Twitter-API? 
 
-APIs (Application Programming Interfaces) is basically a set of access points to an app that can access some data from the website's database given a certain parameters. The Twitter API allows developers to bypass the website interface, and still access the features of Twitter such as posting a tweet, finding a tweet, and so on. 
+APIs (Application Programming Interfaces) is basically a set of access points to an app that can access some data from the website's database given certain parameters. 
 
-For our purposes, we are not necessarily "web scraping" because we are connecting the data through the API, and not hammering our code using BeautifulSoup, but we taking scraping tweets for our project via the API.
+The Twitter API allows developers to bypass the website interface, and still access the features of Twitter such as posting a tweet, finding a tweet, and so on. 
+
+For our purposes, we are not necessarily "web scraping" because we are getting the data through the API, and not hammering our code using html parsers like BeautifulSoup, but we are retrieving tweets for our project via the API.
 
 To create a Twitter Developer account, see this link: https://developer.twitter.com/en/docs/basics/getting-started
 
 ## Let's get started using Python-Twitter
+
 
