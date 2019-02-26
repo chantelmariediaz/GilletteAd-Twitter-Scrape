@@ -278,7 +278,61 @@ tweets = search_results = t.search(q='#boycottgillette', count=100)
 
 search_results.keys() #dictionaries have key, value pairs
 
+```
+
+This returns: 
+
+```python
+
 dict_keys(['statuses', 'search_metadata'])
+
+```
+### More Keys and More Values
+
+Here would be a good opportunity to print tweets and analyze its structure. What we want is pull the `text` part of the dictionary to get the tweets, but we have to first pull the key `statuses`.
+
+```python
+
+tweets = search_results['statuses'] #now this has made it into a list thanks to the brackets
+
+#But you can easily join the list into string such as so
+
+text=" ".join(str(tweet["text"]) for tweet in tweets)
+print(text)
+
+```
+### Cleaning
+We got out the text, but no we still have to clean it. Here's what we have to do like last time, only further broken down into words! Look back to previous example for reference.
+
+```python
+
+from nltk.tokenize import sent_tokenize
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+import string
+
+sentences = sent_tokenize(text)
+sentences = sent_tokenize(text.replace('\n',' '))
+words = word_tokenize(text.replace('\n',' ')) #tokenizes into words
+clean_words = [word for word in words if word not in set(string.punctuation)]
+characters_to_remove = ["''",'``', "RT", "https", "'s", "'", "--", "'re", "s", '’'] #here it will work better
+clean_words = [word for word in clean_words if word not in set(characters_to_remove)]
+english_stops = set(stopwords.words('english'))
+cleanest_words = [word for word in clean_words if word not in english_stops]
+
+#another emoji strip
+import re
+
+
+emoji_pattern = re.compile("["
+        u"\U0001F600-\U0001F64F"  # emoticons
+        u"\U0001F300-\U0001F5FF"  # symbols & pictographs
+        u"\U0001F680-\U0001F6FF"  # transport & map symbols
+        u"\U0001F1E0-\U0001F1FF"  # flags (iOS)
+                           "]+", flags=re.UNICODE)
+print(emoji_pattern.sub(r'', clean_tweets)) # no emoji
+
+
 
 ### That ends Pt 1. LMK what you think (TBA Pt2 Sentiment Analysis, Pt3 Modelling)
 
