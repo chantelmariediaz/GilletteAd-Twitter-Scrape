@@ -1,5 +1,5 @@
 # Welcome to the Tutorial (and Github)!
-For my MKTG 447 Project group members and classmates to see step-by-step the data acquisition, manipulation, and part #1 of cleansing process for the controversial **Gilette Ad Twitter Scrape** using 2 packages. I appreciate any feedback from the community.
+For my MKTG 447 Project group members and classmates to see step-by-step the data acquisition, manipulation, and part #1 of cleansing process for the controversial **Gilette Ad Twitter Scrape**. I appreciate any feedback from the community.
 
 ## Some Notes Before the Tutorial
 The best way to follow is to follow-along with the code! 
@@ -121,4 +121,21 @@ api = twitter.Api(consumer_key="   ", #plug in your keys
 #You can verify them after here
 
 print(api.VerifyCredentials())
+```
+### Let's look at what @Gillette has to say
+
+```python
+
+#In this case, python-twitter allows you to retrieve statuses by handle using GetUserTimeline function
+
+#You assign "statuses" which retrieves a list back of 100 Gillette's most recent tweets. 
+#When printing a list, you must iterate through the list to get all the elements in it.
+#This is represented in s.text FOR s in statuses. This is called a list comprehension
+
+#Read more about it here: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
+
+#Let's see what the people at Gillette are saying first and compare it to the public opinion
+statuses = api.GetUserTimeline(screen_name="Gillette", count=100)
+print([s.text for s in statuses])
+
 ```
