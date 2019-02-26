@@ -35,4 +35,24 @@ To create a Twitter Developer account, see this link: https://developer.twitter.
 
 ## Let's get started using Python-Twitter
 
+### First - what is Jupyter Notebook?
+
+Jupyter notebook is an open-source web application and "notebook that integrates code and its output into a single document that combines visualizations, narrative text, mathematical equations, and other rich media" (Dataquest.com). This is where we'll code.
+
+### Installing
+
+Before you start, you want to make sure you have the necessary libraries. If you don't have Python-Twitter, then you will have to install it using the `pip` command. Always good to `#comment` to make your code readable. 
+
+This is how you install python packages into Jupyter Notebook.
+
+```python
+#Check if you have pip
+
+pip --version
+
+#The package we will be using to interface with Twitter
+
+pip install python-twitter
+```
+
 
