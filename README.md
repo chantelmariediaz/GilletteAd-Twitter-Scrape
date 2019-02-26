@@ -8,13 +8,11 @@ To get started, download Python and Anaconda distribution for Python 3.7. Once f
 
 You can access and upload both notebooks from Thomas and myself from this repository so you can run the code on your own. Remember to install any packages that are not available on your machine already.
 
-Link: https://www.python.org/downloads/
+Python: https://www.python.org/downloads/
 
-Link: https://www.anaconda.com/distribution/
+Anaconda: https://www.anaconda.com/distribution/
 
-Lastly, Git is a version control system, or "a tool to manage source code history." Github is the service that hosts Git repositories or projects (Stack Overflow). 
-
-Otherwise you can just follow along with this README.
+Lastly, Git is a version control system, that manages source code history.Github is the service that hosts Git repositories or projects.
 
 ### What is Text Analytics? 
 
@@ -93,14 +91,17 @@ from nltk.stem import WordNetLemmatizer #lemmas are the canonical form of a set 
 from nltk.tokenize import sent_tokenize #tokenizes and breaks down tokens into sentences *what we will be using*
 
 ```
+
 With **any** language, it's important to understand the **documentation** to familiarize yourself with what you're using.
 
-Link to python-twitter: https://github.com/bear/python-twitter
+Docs for python *general* : https://www.python.org/doc/
 
-Link to re: https://docs.python.org/3/library/re.html
+Docs for python-twitter: https://github.com/bear/python-twitter
 
-Link to string: https://docs.python.org/3/library/string.html
+Docs for re: https://docs.python.org/3/library/re.html
 
-Link to nltk resources: http://www.nltk.org/ &&  https://www.nltk.org/book/ch01.html
+Docs for string: https://docs.python.org/3/library/string.html
+
+Docs for nltk resources: http://www.nltk.org/ &&  https://www.nltk.org/book/ch01.html
 
 
