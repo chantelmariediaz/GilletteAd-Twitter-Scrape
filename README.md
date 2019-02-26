@@ -192,10 +192,27 @@ to do ourselves :D, such as cleaning! Again, here is where NLTK + regular expres
 
 Read more about for loops: https://www.w3schools.com/python/python_for_loops.asp
 
+Take your time analyzing this one before moving on...
 
-
-
-
+```python
+for t in search: #t could be literally called anything like x, since its calling the list element of search
+    tweets = t.text.lower() #defining tweets as a new list that lowers all the text to lowercase using string module
+    tweets = re.sub(r"http\S+", "", tweets) #using regular expressions to replace more symbols for blanks
+    tweets = tweets.replace("…","") #The replace() method returns a copy of the string where all occurrences 
+    #of a substring is replaced with another substring. In this case ... with blanks
+    tweets = strip_emoji(tweets) #calling the strip_emoji function on the tweets
+    sentences = sent_tokenize(tweets.replace('\n',' ')) #tokenizes tweets into sentences, replaces the line break '\n' with blank
+    clean_words = [word for word in sentences if word not in set(string.punctuation)] #another list comprehension in the 
+    #sentences list that will clean out the words with string punctuation and return clean_words
+    characters_to_remove = ["''",'``','...', "'rt",'"rt', ','] #creating another list with other characters we want to remove like quotes
+    #and more. put things in double quotes when a quote is used in the characters removed
+    clean_words = [word for word in clean_words if word not in set(characters_to_remove)] #applying that list to our clean_words
+    #to take out the characters we want to remove, characters_to_remove can be further added as well
+    characters_to_remove2 = [word for word in clean_words if any(letter in sentences for letter in '\\')] #taking out other slashes
+    clean_words = [word for word in clean_words if word not in set(characters_to_remove2)] #again applying that list
+    print(clean_words) #print to see the final output of your new clean_words list from the original search
+    
+```
 
 
 ### That ends Pt 1. LMK what you think (TBA Pt2 Sentiment Analysis, Pt3 Modelling)
