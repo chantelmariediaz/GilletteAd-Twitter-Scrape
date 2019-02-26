@@ -72,7 +72,8 @@ import twitter
 
 import re
 
-#from the string package that useds common string operations such as lowercasing or uppercasing string
+#from the string package that uses common string operations such as lowercasing or uppercasing string
+#another way to think of string is the text of the tweet, or characters, or words
 
 import string
 
@@ -91,5 +92,10 @@ from nltk.stem import WordNetLemmatizer #lemmas are the canonical form of a set 
 from nltk.tokenize import sent_tokenize #tokenizes and breaks down tokens into sentences *what we will be using*
 
 ```
+With **any** language, it's important to understand the **documentation** to familiarize yourself with what you're using.
+Link to python-twitter: https://github.com/bear/python-twitter
+Link to re: https://docs.python.org/3/library/re.html
+Link to string: https://docs.python.org/3/library/string.html
+Link to nltk resources: http://www.nltk.org/ &&  https://www.nltk.org/book/ch01.html
 
 
