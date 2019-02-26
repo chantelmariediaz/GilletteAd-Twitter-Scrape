@@ -61,13 +61,35 @@ If you have already installed the packages you need, then it's time to import th
 We will be using `python-twitter`, `re` or regular expressions, `string`, and `nltk`. 
 
 ```python
-#From the python-twitter package. A Python wrapper around the Twitter API. This library provides a pure Python interface for the Twitter API. Twitter exposes a web services API and this library is intended to make it even easier for Python programmers to use.
+#From python-twitter, a Python wrapper around the Twitter API. 
+#This library provides a pure Python interface for the Twitter API. 
+#Twitter exposes a web services API and this library is intended to make it even easier to use.
 
 import twitter
 
-#The package we will be using to interface with Twitter
+#from the regular expression *re* module. A regular expression is a special sequence of characters that 
+#helps you match or find other strings or sets of strings, using a specialized syntax held in a pattern. 
 
-pip install python-twitter
+import re
+
+#from the string package that useds common string operations such as lowercasing or uppercasing string
+
+import string
+
+#nltk includes many useful packages
+
+import nltk 
+
+#Tokenization is the act of breaking up a sequence of strings into pieces such as words, keywords, phrases, symbols 
+#and other elements called tokens.
+
+from nltk.tokenize import word_tokenize #tokenizes and breaks down tokens into words
+from nltk.corpus import stopwords #takes out unneccessary stopwords, but decided not to use it this time
+from nltk.stem import WordNetLemmatizer #lemmas are the canonical form of a set of words. The form of a word that 
+#appears at the beginning of a dictionary or glossary entry. For example run, ran, and running all have the semantic
+#representation of run
+from nltk.tokenize import sent_tokenize #tokenizes and breaks down tokens into sentences *what we will be using*
+
 ```
 
 
