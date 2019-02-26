@@ -9,6 +9,7 @@ To get started, download Python and Anaconda distribution for Python 3.7. Once f
 You can access and upload both notebooks from Thomas and myself from this repository so you can run the code on your own. Remember to install any packages that are not available on your machine already.
 
 Link: https://www.python.org/downloads/
+
 Link: https://www.anaconda.com/distribution/
 
 Lastly, Git is a version control system, or "a tool to manage source code history." Github is the service that hosts Git repositories or projects (Stack Overflow). 
@@ -93,9 +94,13 @@ from nltk.tokenize import sent_tokenize #tokenizes and breaks down tokens into s
 
 ```
 With **any** language, it's important to understand the **documentation** to familiarize yourself with what you're using.
+
 Link to python-twitter: https://github.com/bear/python-twitter
+
 Link to re: https://docs.python.org/3/library/re.html
+
 Link to string: https://docs.python.org/3/library/string.html
+
 Link to nltk resources: http://www.nltk.org/ &&  https://www.nltk.org/book/ch01.html
 
 
