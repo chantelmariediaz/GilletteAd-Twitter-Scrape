@@ -319,6 +319,7 @@ characters_to_remove = ["''",'``', "RT", "https", "'s", "'", "--", "'re", "s", '
 clean_words = [word for word in clean_words if word not in set(characters_to_remove)]
 english_stops = set(stopwords.words('english'))
 cleanest_words = [word for word in clean_words if word not in english_stops]
+clean_tweets=" ".join(str(clean_tweet) for clean_tweet in clean_words) #joins all the words into one big string
 
 #another emoji strip
 import re
@@ -332,6 +333,53 @@ emoji_pattern = re.compile("["
                            "]+", flags=re.UNICODE)
 print(emoji_pattern.sub(r'', clean_tweets)) # no emoji
 
+```
+### Finding interesting things with words
+
+Want to know the most frequent words used?
+
+```python
+
+from nltk.probability import FreqDist
+
+fdist1 = FreqDist(nltk.tokenize.word_tokenize(clean_tweets))
+
+fdist1.most_common(50)
+
+```
+The result would look like this:
+
+```python
+
+[('Gillette', 53),
+ ('BoycottGillette', 42),
+ ('GilletteAd', 28),
+ 
+ ```
+ 
+Want to make a wordcloud?
+
+```python
+
+# wordcloud package can be used to generate wordclouds
+from wordcloud import WordCloud
+
+# patplotlib is a library for plotting graphs
+import matplotlib.pyplot as plt
+
+# this setting will display the output inline
+%matplotlib inline
+
+wordcloud = WordCloud(max_font_size=50, max_words=100, background_color="white").generate(clean_tweets)
+
+plt.figure()
+plt.imshow(wordcloud, interpolation="bilinear")
+plt.axis("off")
+plt.show()
+
+```
+
+To see the full notebooks and wordcloud, download the Jupyter Notebooks
 
 
 ### That ends Pt 1. LMK what you think (TBA Pt2 Sentiment Analysis, Pt3 Modelling)
