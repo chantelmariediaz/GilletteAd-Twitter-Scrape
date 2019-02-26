@@ -80,14 +80,14 @@ import string
 
 import nltk 
 
-#Tokenization is the act of breaking up a sequence of strings into pieces such as words, keywords, phrases, symbols 
-#and other elements called tokens.
+#Tokenization is the act of breaking up a sequence of strings into pieces such as words, keywords, phrases
+#symbols and other elements called tokens.
 
 from nltk.tokenize import word_tokenize #tokenizes and breaks down tokens into words
 from nltk.corpus import stopwords #takes out unneccessary stopwords, but decided not to use it this time
-from nltk.stem import WordNetLemmatizer #lemmas are the canonical form of a set of words. The form of a word that 
-#appears at the beginning of a dictionary or glossary entry. For example run, ran, and running all have the semantic
-#representation of run
+from nltk.stem import WordNetLemmatizer #lemmas are the canonical form of a set of words. The form of a word
+#that appears at the beginning of a dictionary or glossary entry. For example run, ran, and running all 
+#have the semantic representation of run
 from nltk.tokenize import sent_tokenize #tokenizes and breaks down tokens into sentences *what we will be using*
 
 ```
