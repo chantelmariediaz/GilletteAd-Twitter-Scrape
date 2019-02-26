@@ -252,7 +252,7 @@ from twython import Twython
 
 ```
 
-## Verifying Credentials
+### Verifying Credentials
 
 ```python
 
@@ -268,6 +268,17 @@ t = Twython(app_key=api_key, app_secret=api_secret, oauth_token=access_token_key
            
 ```
 
+### Grabbing Tweets with #Boycottgillette
+
+Here is an important difference than in the previous Python-Twitter tutorial. The below creates a `dictionary` object and not a `list` object, therefore we will have to treat it differently moving forward!
+
+```python
+
+tweets = search_results = t.search(q='#boycottgillette', count=100)
+
+search_results.keys() #dictionaries have key, value pairs
+
+dict_keys(['statuses', 'search_metadata'])
 
 ### That ends Pt 1. LMK what you think (TBA Pt2 Sentiment Analysis, Pt3 Modelling)
 
