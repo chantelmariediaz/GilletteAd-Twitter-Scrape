@@ -1,5 +1,5 @@
 # Welcome to the Tutorial (and Github)!
-For my **MKTG 447 Project group members and classmates** to see step-by-step the data acquisition, manipulation, and part #1 of cleansing process for the controversial **Gilette Ad Twitter Scrape** using 2 packages. I appreciate any feedback from the community.
+For my MKTG 447 Project group members and classmates to see step-by-step the data acquisition, manipulation, and part #1 of cleansing process for the controversial **Gilette Ad Twitter Scrape** using 2 packages. I appreciate any feedback from the community.
 
 ## Some Notes Before the Tutorial
 The best way to follow is to follow-along with the code! 
@@ -104,4 +104,21 @@ With **any** language, it's important to understand the **documentation** to fam
 
 - Docs for **nltk** resources: http://www.nltk.org/ &&  https://www.nltk.org/book/ch01.html
 
+### Verifying Credentials 
 
+Similarily to Tweepy and Twython, Python-Twitter also needs to verify your credentials via your consumer key and secret, as well as your token key and token secret. Everyone with a developer account is given access to the API using the 4 keys.
+
+```python
+#Feel free to use your own credentials
+
+#Find out your credentials: https://developer.twitter.com/en/docs/basics/authentication/guides/access-tokens.html
+
+api = twitter.Api(consumer_key="   ", #plug in your keys
+  consumer_secret="  ",
+  access_token_key="  ",
+  access_token_secret="   ")
+
+#You can verify them after here
+
+print(api.VerifyCredentials())
+```
