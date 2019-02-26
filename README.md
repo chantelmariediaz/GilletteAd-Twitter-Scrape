@@ -198,20 +198,20 @@ Take your time analyzing this one before moving on...
 
 for t in search: #t could be literally called anything, like x, since its calling the list element of search
 
-    tweets = t.text.lower() #defining tweets as a new list that lowers all the text to lowercase using string module
+    tweets = t.text.lower() #defining tweets as a new list that lowers all the text to lowercase with string
     
     tweets = re.sub(r"http\S+", "", tweets) #using regular expressions to replace more symbols for blanks
     
-    tweets = tweets.replace("…","") #The replace() method returns a copy of the string where all occurrences 
-    #of a substring is replaced with another substring. In this case ... with blanks
+    tweets = tweets.replace("…","") #The replace() method returns a copy of the string where all 
+    #occurrences of a substring is replaced with another substring. In this case ... with blanks
     
     tweets = strip_emoji(tweets) #calling the strip_emoji function on the tweets
     
-    sentences = sent_tokenize(tweets.replace('\n',' ')) #tokenizes tweets into sentences, replaces the line break
-    #'\n' with blank
+    sentences = sent_tokenize(tweets.replace('\n',' ')) #tokenizes tweets into sentences, replaces the line 
+    #break '\n' with blank
     
-    clean_words = [word for word in sentences if word not in set(string.punctuation)] #another list comprehension
-    #in the sentences list that will clean out the words with string punctuation and return clean_words
+    clean_words = [word for word in sentences if word not in set(string.punctuation)] #another list 
+    #comprehension in the sentences list that will clean out the words with string punctuation and return clean_words
     
     characters_to_remove = ["''",'``','...', "'rt",'"rt', ','] #creating another list with other characters we want
     #to remove like quotes and more. put things in double quotes when a quote is used in the characters removed
