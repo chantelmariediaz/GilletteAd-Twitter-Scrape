@@ -32,6 +32,8 @@ For our purposes, we are not necessarily "web scraping" because we are getting t
 
 To create a Twitter Developer account, see this link: https://developer.twitter.com/en/docs/basics/getting-started
 
+For our project, we are going to grab tweets that discuss the controversial Gillette Ad, calculate sentiment, and run a model.
+
 ## Let's get started using Python-Twitter Scraping Pt. 1
 
 ### First - what is Jupyter Notebook?
@@ -152,5 +154,32 @@ Here are some of the results
 Notice the tweets within the brackets? The brackets represent the start and end of the list, while the tweets are strings inside.
 
 ### Let's look at what *everyone else* has to say
+
+Everyone has their own opinion about the ad, but what are users saying about it on Twitter?
+
+#### Let's strip out some emojis first
+
+This is where understanding more the `re` library and its packages are important. Emojis are based on unicode characters, which for our purposes won't be helpful to our model (creating a binary label if an emoji is present is another story). So, knowing their codes will be important in finding out how to strip them from our tweets. `def` here defines a function to strip the emoji with one argument `text`.
+
+```python
+
+#Courtesy of the good people of Stack Overflow: http://stackoverflow.com/a/13752628/6762004
+RE_EMOJI = re.compile('[\U00010000-\U0010ffff]', flags=re.UNICODE) #this compiles a pretty good range of emojis
+
+#Full emoji list: https://unicode.org/emoji/charts/full-emoji-list.html
+
+def strip_emoji(text): #def defines a new function you create, you can call it anything as long as you pass an argument in it
+    return RE_EMOJI.sub(r'', text) #that function will then return the desired output, which is to substitute them as blanks
+
+print(strip_emoji('🙄🤔'))
+
+```
+
+
+
+
+
+
+### That ends Pt 1. LMK what you think (TBA Pt2 Sentiment Analysis, Pt3 Modelling)
 
 
