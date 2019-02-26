@@ -48,7 +48,7 @@ This is how you install python packages into Jupyter Notebook.
 ```python
 #Check if you have pip
 
-pip --version
+pip
 
 #The package we will be using to interface with Twitter
 
