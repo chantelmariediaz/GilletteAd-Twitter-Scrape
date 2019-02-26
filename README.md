@@ -124,7 +124,7 @@ print(api.VerifyCredentials())
 ```
 ### Let's look at what @Gillette has to say
 
-Python-Twitter allows you use to retrieve statuses by typing in a Twitter handle using the `GetUserTimeline` function. As you'll see in the code, we assign `statuses` as the list of Gillette's 100 most recent tweets. However, to access the elements in the list, you have to use a *list comprehension*. 
+Python-Twitter allows you use to retrieve statuses by typing in a Twitter handle using the `GetUserTimeline` function. As you'll see in the code, we assign `statuses` as a **list** of Gillette's 100 most recent tweets. However, to access the elements in the list, you have to use a *list comprehension*. 
 
 Read here: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
 
@@ -145,9 +145,12 @@ Here are some of the results
 
 ["@username We're so happy to hear that, Crayton. We believe in the best in men and want to use our platform to… 
 '@username Thank you! We appreciate your support.', 
-"@username We're so glad you liked it, Aviva. Men everywhere are already working to re-write the rules on what it lo… 
+"@username We're so glad you liked it, Aviva. Men everywhere are already working to re-write the rules...
 "@username We appreciate your kind words, Jimmy. We're happy to hear you liked our Pure Shave Gel...]
 
 ```
+Notice the tweets within the brackets? The brackets represent the start and end of the list, while the tweets are strings inside.
+
+### Let's look at what *everyone else* has to say
 
 
