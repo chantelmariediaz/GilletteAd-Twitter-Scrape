@@ -242,6 +242,33 @@ If you notice under `characters_to_remove` the `rt`s and the `@`s were not remov
 
 This is Thomas Algenio's approach, another group member for our MKTG 447 project.
 
+### Install and Import Twython
+
+```python
+
+pip install twython
+
+from twython import Twython
+
+```
+
+## Verifying Credentials
+
+```python
+
+api_key = "" #plug in your own keys
+api_secret = ""
+access_token_key = ""
+access_token_secret = ""
+
+#the wrapper
+
+t = Twython(app_key=api_key, app_secret=api_secret, oauth_token=access_token_key, 
+           oauth_token_secret=access_token_secret)
+           
+```
+
+
 ### That ends Pt 1. LMK what you think (TBA Pt2 Sentiment Analysis, Pt3 Modelling)
 
 
