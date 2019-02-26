@@ -33,7 +33,7 @@ For our purposes, we are not necessarily "web scraping" because we are getting t
 
 To create a Twitter Developer account, see this link: https://developer.twitter.com/en/docs/basics/getting-started
 
-## Let's get started using Python-Twitter
+## Let's get started using Python-Twitter Scraping Pt. 1
 
 ### First - what is Jupyter Notebook?
 
@@ -49,6 +49,21 @@ This is how you install python packages into Jupyter Notebook.
 #Check if you have pip
 
 pip
+
+#The package we will be using to interface with Twitter
+
+pip install python-twitter
+```
+### Importing Libraries
+
+If you have already installed the packages you need, then it's time to import them into your notebook to use! Naturally, this would be your first or second cell in your notebook. It's a good practice to import numerous libraries, maybe some you don't think you need now, but could eventually deem useful to you later.
+
+We will be using `python-twitter`, `re` or regular expressions, `string`, and `nltk`. 
+
+```python
+#From the python-twitter package. A Python wrapper around the Twitter API. This library provides a pure Python interface for the Twitter API. Twitter exposes a web services API and this library is intended to make it even easier for Python programmers to use.
+
+import twitter
 
 #The package we will be using to interface with Twitter
 
