@@ -34,9 +34,9 @@ To create a Twitter Developer account, see this link: https://developer.twitter.
 
 For our project, we are going to grab tweets that discuss the controversial Gillette Ad, calculate sentiment, and run a model.
 
-## Let's get started using Python-Twitter Scraping Pt. 1
+## Let's Get Started using Python-Twitter Scraping Pt. 1
 
-### First - what is Jupyter Notebook?
+### First - What is Jupyter Notebook?
 
 Jupyter notebook is an open-source web application and "notebook that integrates code and its output into a single document that combines visualizations, narrative text, mathematical equations, and other rich media" (Dataquest.com). This is where we'll code.
 
@@ -106,7 +106,7 @@ With **any** language, it's important to understand the **documentation** to fam
 
 - Docs for **nltk** resources: http://www.nltk.org/ &&  https://www.nltk.org/book/ch01.html
 
-### Verifying Credentials 
+### Verifying Credentials
 
 Similarily to Tweepy and Twython, Python-Twitter also needs to verify your credentials via your consumer key and secret, as well as your token key and token secret. Everyone with a developer account is given access to the API using the 4 keys.
 
@@ -124,7 +124,7 @@ api = twitter.Api(consumer_key="   ", #plug in your keys
 
 print(api.VerifyCredentials())
 ```
-### Let's look at what @Gillette has to say
+### Let's Look at What @Gillette Has to Say
 
 Python-Twitter allows you use to retrieve statuses by typing in a Twitter handle using the `GetUserTimeline` function. As you'll see in the code, we assign `statuses` as a **list** of Gillette's 100 most recent tweets. However, to access the elements in the list, you have to use a *list comprehension*. 
 
@@ -153,11 +153,11 @@ Here are some of the results
 ```
 Notice the tweets within the brackets? The brackets represent the start and end of the list, while the tweets are strings inside.
 
-### Let's look at what *everyone else* has to say
+### Let's Look at What *Everyone Else* Has to Say
 
 Everyone has their own opinion about the ad, but what are users saying about it on Twitter?
 
-#### Let's strip out some emojis first
+#### Let's Strip out Some Emojis First
 
 This is where understanding more the `re` library and its packages are important. Emojis are based on unicode characters, which for our purposes won't be helpful to our model (creating a binary label if an emoji is present is another story). So, knowing their codes will be important in finding out how to strip them from our tweets. `def` here defines a function to strip the emoji with one argument `text`.
 
@@ -168,12 +168,30 @@ RE_EMOJI = re.compile('[\U00010000-\U0010ffff]', flags=re.UNICODE) #this compile
 
 #Full emoji list: https://unicode.org/emoji/charts/full-emoji-list.html
 
-def strip_emoji(text): #def defines a new function you create, you can call it anything as long as you pass an argument in it
-    return RE_EMOJI.sub(r'', text) #that function will then return the desired output, which is to substitute them as blanks
+def strip_emoji(text): #def defines a new function you create, you can call it anything as long as you pass an
+                       #argument in it
+    return RE_EMOJI.sub(r'', text) #that function will then return the desired output, which is to substitute
+    #them as blanks
 
 print(strip_emoji('🙄🤔'))
 
 ```
+
+### Putting it all Together
+
+Another function is Python-Twitter is to GetSearch, which grabs hashtags or keywords of your choice. This is what we will
+be using for our purposes. Here we are finding #gillette, getting english only "en" tweets, and about 100 of them. 
+
+```python
+search = api.GetSearch("#gillette", lang="en",count=100) #search is a list of tweets, similar to last time
+
+```
+
+However here we need to create a `for` loop in our list to iterate through the elements to do the other tasks we don't want
+to do ourselves :D, such as cleaning! Again, here is where NLTK + regular expressions + the string module come into play.
+
+Read more about for loops: https://www.w3schools.com/python/python_for_loops.asp
+
 
 
 
