@@ -191,7 +191,7 @@ to do ourselves :D, such as cleaning! Again, here is where NLTK + regular expres
 
 Read more about for loops: https://www.w3schools.com/python/python_for_loops.asp
 
-Take your time analyzing this one before moving on...
+(For my group) **Take your time analyzing this one before moving on...**
 
 ```python
 
@@ -223,6 +223,15 @@ for t in search: #t could be literally called anything, like x, since its callin
     clean_words = [word for word in clean_words if word not in set(characters_to_remove2)] #again applying list
     print(clean_words) #print to see the final output of your new clean_words list from the original search
     
+```
+The results look something like this
+
+```python
+['we’re told that there is a crisis of masculinity.', 'from #metoo to #gillette - something isn’t working.', 'garrett j wh']
+["@username @username a country run by women who don't approve of masculinity.", '#gillette #procterandgamble']
+['nervous to apply for a job like "food champion" at border foods?', "apply even if you're not a 100% match.", 'you might b']
+['rt @username: last month, #gillette released a controversial ad campaign calling on men to "be better" for the men of tomorrow.'
+,'but what']
 ```
 
 
