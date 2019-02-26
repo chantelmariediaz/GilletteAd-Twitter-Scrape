@@ -232,11 +232,15 @@ The results look something like this
 ['rt @username: last month, #gillette released a controversial ad campaign calling on men to "be better" for the men 
 of tomorrow.','but what']
 ```
-*Not quite the sentiment of Gillette's statuses*, but we aren't there yet. I have ran the code for gillette (no hashtag) and #gilette with one l, since it appears have to been mispelled.
+*Not quite the sentiment of Gillette's statuses*, but we aren't there yet. I have ran the code for gillette (no hashtag) and #gilette with one l, since it appears some users misspelled the brand's name. 
 
 ### Important Note
 
-If you notice under `characters_to_remove` the `rt`s and the `@`s were not removed in the result. That is because the list can't identify different variations of rt or the handles or hashtags in which those characters are used. This is where tokenizing them into `word_tokenize` and separating them will be best in eliminating them. You can also use Excel to find and replace with space. 
+If you notice under `characters_to_remove` the `rt`s and the `@`s were not removed in the result. That is because the list can't identify different variations of rt or the handles or hashtags in which those characters are used. This is where tokenizing them into `word_tokenize` and separating them will be best in eliminating them. You can also use Excel to find and replace with a space. 
+
+## Alternative: Twython and Tokenizing into Words
+
+This is Thomas Algenio's approach, another group member for our MKTG 447 project.
 
 ### That ends Pt 1. LMK what you think (TBA Pt2 Sentiment Analysis, Pt3 Modelling)
 
