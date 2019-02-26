@@ -1,6 +1,9 @@
 # Welcome to the Tutorial (and Github)! Pt. 1
 For my MKTG 447 Project group members and classmates to see step-by-step the data acquisition, manipulation, and part #1 of cleansing process for the controversial **Gilette Ad Twitter Scrape**. I appreciate any feedback from the community.
 
+See notebooks: GilletteAdNotebook-Chantel+Diaz.ipynb && #BoycottGillettee+Notebook+-+Thomas+Algenio.ipynb
+      
+
 ## Some Notes Before the Tutorial
 The best way to follow is to follow-along with the code! 
 
