@@ -212,7 +212,7 @@ for t in search: #t could be literally called anything, like x, since its callin
     clean_words = [word for word in sentences if word not in set(string.punctuation)] #another list comprehension
     #in the sentences list that will clean out the words with string punctuation and return clean_words
     
-    characters_to_remove = ["''",'``','...', "'rt",'"rt', ','] #creating another list with other characters
+    characters_to_remove = ["''",'``','...', "'rt",'"rt', '#','@',','] #creating another list with other characters
     #to remove like quotes and more. put things in double quotes when a quote is used in the characters removed
     
     clean_words = [word for word in clean_words if word not in set(characters_to_remove)] #applying that list to
@@ -229,11 +229,14 @@ The results look something like this
 ```python
 ['we’re told that there is a crisis of masculinity.', 'from #metoo to #gillette - something isn’t working.', 'garrett j wh']
 ["@username @username a country run by women who don't approve of masculinity.", '#gillette #procterandgamble']
-['nervous to apply for a job like "food champion" at border foods?', "apply even if you're not a 100% match.", 'you might b']
-['rt @username: last month, #gillette released a controversial ad campaign calling on men to "be better" for the men of tomorrow.'
-,'but what']
+['rt @username: last month, #gillette released a controversial ad campaign calling on men to "be better" for the men 
+of tomorrow.','but what']
 ```
+*Not quite the sentiment of Gillette's statuses*, but we aren't there yet. I have ran the code for gillette (no hashtag) and #gilette with one l, since it appears have to been mispelled.
 
+### Important Note
+
+If you notice under `characters_to_remove` the `rt`s and the `@`s were not removed in the result. That is because the list can't identify different variations of rt or the handles or hashtags in which those characters are used. This is where tokenizing them into `word_tokenize` and separating them will be best in eliminating them. You can also use Excel to find and replace with space. 
 
 ### That ends Pt 1. LMK what you think (TBA Pt2 Sentiment Analysis, Pt3 Modelling)
 
