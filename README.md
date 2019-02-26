@@ -86,7 +86,6 @@ import nltk
 #symbols and other elements called tokens.
 
 from nltk.tokenize import word_tokenize #tokenizes and breaks down tokens into words
-from nltk.corpus import stopwords #takes out unneccessary stopwords, but decided not to use it this time
 from nltk.stem import WordNetLemmatizer #lemmas are the canonical form of a set of words. The form of a word
 #that appears at the beginning of a dictionary or glossary entry. For example run, ran, and running all 
 #have the semantic representation of run
@@ -210,18 +209,18 @@ for t in search: #t could be literally called anything, like x, since its callin
     sentences = sent_tokenize(tweets.replace('\n',' ')) #tokenizes tweets into sentences, replaces the line 
     #break '\n' with blank
     
-    clean_words = [word for word in sentences if word not in set(string.punctuation)] #another list 
-    #comprehension in the sentences list that will clean out the words with string punctuation and return clean_words
+    clean_words = [word for word in sentences if word not in set(string.punctuation)] #another list comprehension
+    #in the sentences list that will clean out the words with string punctuation and return clean_words
     
-    characters_to_remove = ["''",'``','...', "'rt",'"rt', ','] #creating another list with other characters we want
+    characters_to_remove = ["''",'``','...', "'rt",'"rt', ','] #creating another list with other characters
     #to remove like quotes and more. put things in double quotes when a quote is used in the characters removed
     
-    clean_words = [word for word in clean_words if word not in set(characters_to_remove)] #applying that list to our
+    clean_words = [word for word in clean_words if word not in set(characters_to_remove)] #applying that list to
     #clean_words to take out the characters we want to remove, characters_to_remove can be further added as well
     
     characters_to_remove2 = [word for word in clean_words if any(letter in sentences for letter in '\\')] 
     #taking out other slashes
-    clean_words = [word for word in clean_words if word not in set(characters_to_remove2)] #again applying that list
+    clean_words = [word for word in clean_words if word not in set(characters_to_remove2)] #again applying list
     print(clean_words) #print to see the final output of your new clean_words list from the original search
     
 ```
