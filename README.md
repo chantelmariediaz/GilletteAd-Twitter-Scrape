@@ -385,6 +385,6 @@ plt.show()
 To see the full notebooks and wordcloud, download the Jupyter Notebooks
 
 
-### That ends Pt 1. LMK what you think (TBA Pt2 Sentiment Analysis, Pt3 Modelling)
+### That ends Pt 1. TBA Pt2 Sentiment Analysis and Pt3 Modeling
 
 
